@@ -15,58 +15,46 @@ void adicionar(struct Registro pessoas[], int *numPessoas);
 void vizualizar(struct Registro pessoas[], int *numPessoas);
 void editar(struct Registro pessoas[], int numPessoas);
 void excluir();
-int menu(void);
-
-
-
-void exibir(struct Registro c);
 
 int main(void)
-{
-    struct Registro pessoas1;
-    strcpy(pessoas1.nome, "Mateus");
-    strcpy(pessoas1.profissao, "Desenvolvedor");
-    pessoas1.idade = 22;
-    pessoas1.id = 1;
-
+{   
     printf("O que Gostaria de fazer hoje?\n");
-}
-
-int menu(void)
-{
     
-    printf("Selecione as opções abaixo\n");
+    printf("Selecione as opcoes abaixo\n");
     printf("1. Adicionar novo registro\n");
     printf("2. Vizualizar todos os registros\n");
     printf("3. Editar um registro\n");
     printf("4. Excluir um registro\n");
-    printf("5. Sair");
+    printf("5. Sair\n");
 
+    struct Registro pessoas[100];
+    int numPessoas = 0;
     int escolha = scanf("%d");
+
     switch (escolha)
     {
     case 1:
+        adicionar(pessoas, numPessoas);
         break;
     case 2:
-        /* code */
+        vizualizar(pessoas,numPessoas);
         break;
     case 3:
-        /* code */
+        editar(pessoas, numPessoas);
         break;
     case 4:
-        /* code */
+        excluir(pessoas, numPessoas);
         break;
     
     default:
     {
-        printf("Seleção invalidaz, por favor entre uma das opções oferecidas!");
-        return menu();
+        printf("Selecao invalida, por favor entre uma das opcoes oferecidas!");
+        return main();
         break;
-    }
     }
 
 }
-
+}
 void exibir(struct Registro c)
 
 {
@@ -81,7 +69,7 @@ void adicionar(struct Registro pessoas[], int *numPessoas)
     printf("Digite o nome do cliente: ");
     scanf("%s", pessoas[*numPessoas].nome);
 
-    printf("Digite a profissão de %s: ", pessoas[*numPessoas].nome);
+    printf("Digite a profissao de %s: ", pessoas[*numPessoas].nome);
     scanf("%s", pessoas[*numPessoas].profissao);
 
     printf("Qual a idade de %s: ", pessoas[*numPessoas].nome);
@@ -97,7 +85,7 @@ void vizualizar(struct Registro pessoas[], int *numPessoas)
     for (int i = 0; i < numPessoas; i++)
     {
         printf("Nome: %s\n", pessoas[i].nome);
-        printf("Profissão: %s\n", pessoas[i].profissao);
+        printf("Profissao: %s\n", pessoas[i].profissao);
         printf("Idade: %d\n", pessoas[i].idade);
         printf("ID: %d\n", pessoas[i].id);
         printf("\n");
@@ -107,11 +95,11 @@ void vizualizar(struct Registro pessoas[], int *numPessoas)
     
     
     do {
-        printf("Aperte a tecla 'Enter' voltar ao menu anterior: ");
+        printf("Aperte a tecla 'v' para voltar ao menu anterior: ");
         scanf("%c", retorno);
-        if (strcmp(' ', retorno) == 0) return menu();
+        if (strcmp('v', retorno) == 0) return main();
     }
-    while (strcmp(' ', retorno) != 0);
+    while (strcmp('v', retorno) != 0);
 }
 
 //Edita os as informações
@@ -128,7 +116,7 @@ void editar(struct Registro pessoas[], int numPessoas)
             printf("Digite o nome da pessoa: ");
             scanf("%s", pessoas[i].nome);
 
-            printf("Digite a profissão de %s: ", pessoas[i].nome);
+            printf("Digite a profissao de %s: ", pessoas[i].nome);
             scanf("%s", pessoas[i].profissao);
 
             printf("Qual a idade de %s: ", pessoas[i].nome);
@@ -139,10 +127,24 @@ void editar(struct Registro pessoas[], int numPessoas)
             return;
         } 
     }
-    printf("Pessoa não encontrada!");
+    printf("Pessoa nao encontrada!");
     
 }
-
 //Exluir um registro da struct
 void excluir(struct Registro pessoas[], int numPessoas)
-{}
+{
+    char nome[25];
+    printf("Qual pessoa gostaria de apagar o registro? ");
+    scanf("%s", nome);
+
+    for (int i = 0; i < numPessoas; i++)
+    {
+        if (strcmp(pessoas[i].nome, nome) == 0)
+        {
+            pessoas[i] = pessoas[i + 1];
+        }
+
+    }
+    printf("Usuario nao encontrado!");
+    main();
+}
