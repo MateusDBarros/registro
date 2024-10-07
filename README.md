@@ -26,8 +26,16 @@ Este projeto implementa um sistema de cadastro em linguagem C, permitindo adicio
 
 ## Estrutura do Projeto
 
-- **main.c**: Contém a implementação principal do sistema de cadastro.
-- **Registro**: Define a estrutura dos dados armazenados para cada cliente.
+- **registro.c**: Contém a implementação principal do sistema de cadastro.
+- **Registro (struct)**: Define a estrutura dos dados armazenados para cada cliente.
+
+### Adicionar um Novo Registro
+
+O usuário será solicitado a inserir o nome, profissão e idade do cliente.
+
+### Visualizar Todos os Registros
+
+Os registros serão exibidos em formato de tabela
 
 ### Editar um Registro
 
