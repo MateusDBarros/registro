@@ -13,7 +13,7 @@ Este projeto implementa um sistema de cadastro em linguagem C, permitindo adicio
 
 1. Clone o repositório:
     ```bash
-    git clone https://github.com/seu_usuario/sistema-de-cadastro.git
+    git clone https://github.com/MateusDBarros/registro.git
     ```
 2. Compile o código:
     ```bash
