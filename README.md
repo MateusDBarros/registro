@@ -17,11 +17,11 @@ Este projeto implementa um sistema de cadastro em linguagem C, permitindo adicio
     ```
 2. Compile o código:
     ```bash
-    gcc -o cadastro main.c
+    gcc -o registro.c
     ```
 3. Execute o programa:
     ```bash
-    ./cadastro
+    ./registro
     ```
 
 ## Estrutura do Projeto
