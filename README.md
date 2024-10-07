@@ -29,11 +29,17 @@ Este projeto implementa um sistema de cadastro em linguagem C, permitindo adicio
 - **main.c**: Contém a implementação principal do sistema de cadastro.
 - **Registro**: Define a estrutura dos dados armazenados para cada cliente.
 
-## Exemplo de Uso
+### Editar um Registro
 
-Ao executar o programa, será apresentada a seguinte interface de menu:
+O usuário poderá selecionar um cliente pelo nome e atualizar suas informações.
 
-Nome	Profissao	Idade
-Joao	Engenheiro	30
-Maria	Medica	28
----------------------	---------------------	-------
+### Excluir um Registro
+
+O usuário poderá selecionar um cliente pelo nome e removê-lo do sistema.
+
+## Contribuindo
+
+Se você quiser contribuir com este projeto, sinta-se à vontade para abrir pull requests e issues. Toda ajuda é bem-vinda!
+
+Para mais informações, entre em contato via [mb685212@gmail.com](mailto:mb685212@gmail.com).
+
