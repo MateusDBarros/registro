@@ -33,4 +33,7 @@ Este projeto implementa um sistema de cadastro em linguagem C, permitindo adicio
 
 Ao executar o programa, será apresentada a seguinte interface de menu:
 
-
+Nome	Profissao	Idade
+Joao	Engenheiro	30
+Maria	Medica	28
+---------------------	---------------------	-------
