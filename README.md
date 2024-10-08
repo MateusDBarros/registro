@@ -49,5 +49,5 @@ O usuário poderá selecionar um cliente pelo nome e removê-lo do sistema.
 
 Se você quiser contribuir com este projeto, sinta-se à vontade para abrir pull requests e issues. Toda ajuda é bem-vinda!
 
-Para mais informações, entre em contato via [mb685212@gmail.com](mailto:mb685212@gmail.com) ou ([linkedin.com/in.](https://linkedin.com/in/mateus-barros13)
+Para mais informações, entre em contato via [mb685212@gmail.com](mailto:mb685212@gmail.com) ou [linkedin](https://linkedin.com/in/mateus-barros13)
 
